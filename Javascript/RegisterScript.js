@@ -43,7 +43,9 @@ function SignUp () {
           // ...
         });
     }else {
-        alert("wrong");
+        x.textContent = "Unauthorized or Bad Credentials";
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
     }
 
 
