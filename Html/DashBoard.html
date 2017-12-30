@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Style/DashBoard.css">
     <script src="../Javascript/DashBoard.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<title>Super Admin Dashboard</title>
 </head>
 <body>
@@ -20,6 +24,22 @@
      <div id="content" class="card">
         <div class="container">
             <h3> School Information Update Form </h3>
+             <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="name">
+                        <label class="mdl-textfield__label" for="sample3">School Name</label>
+                    </div>
+                </form>
+            <form action="#">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <textarea class="mdl-textfield__input" type="text" rows="3" id="adress"></textarea>
+                    <label class="mdl-textfield__label" for="sample5">School Adress</label>
+                </div>
+            </form>
+            <button onclick="UploadToFireStore()"
+                    id="loginButton"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit Data
+            </button>
          </div>
     </div>
 

@@ -27,3 +27,7 @@ function LogOut() {
     });
 }
 
+function UploadToFireStore() {
+
+}
+
