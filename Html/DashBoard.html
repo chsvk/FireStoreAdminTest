@@ -2,13 +2,15 @@
 <html>
 <head>
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../Style/DashBoard.css">
-    <script src="../Javascript/DashBoard.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="../Javascript/DashBoard.js"></script>
 	<title>Super Admin Dashboard</title>
 </head>
 <body>
@@ -36,12 +38,37 @@
                     <label class="mdl-textfield__label" for="sample5">School Adress</label>
                 </div>
             </form>
-            <button onclick="UploadToFireStore()"
-                    id="loginButton"
-                    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit Data
+            <button id="SubmitDataButton" onclick="UploadToFireStore()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit Data
             </button>
          </div>
     </div>
-
+    <div id="content2" class="card">
+        <div class="container">
+            <h3> Invite School </h3>
+             <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="mail">
+                        <label class="mdl-textfield__label" for="sample3">Email</label>
+                    </div>
+                </form>
+            <form action="#">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" id="id">
+                        <label class="mdl-textfield__label" for="sample3">School ID</label>
+                    </div>
+                </form>
+            <div class="dropdown">
+                <button id="dropDownButton" onclick="DropDown()" class="dropbtn">Type</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a onclick = "admin()" href="#">Admin</a>
+                    <a onclick = "parent()" href="#">Parent</a>
+                    <a onclick = "driver()" href="#">Driver</a>
+                </div>
+            </div>
+            <button id="InviteSchoolButton" onclick="InviteSchoolButton()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Invite School
+            </button>
+         </div>
+    </div>
+  <div id="snackbar">Some text some message..</div>
 </body>
 </html>
